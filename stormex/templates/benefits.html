@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Writing with yaml example</title>
+</head>
+<body>
+<p>You Set Benefit Goals</p>
+<form method = 'GET'>
+	<p>{{ run.as_p }}</p>
+	<p>{{ sed.as_p }}</p>
+	<p>{{ nit.as_p }}</p>
+	<p>{{ phos.as_p }}</p>
+	<input type='submit' align ='bottom' value='Minimize'>
+</form>
+{% if messages %}
+{% for message in messages %}
+<p> Total Cost: ${{ message }} Million </p>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
