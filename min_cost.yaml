@@ -1,7 +1,6 @@
 x:
     1_headwaters:
         1_open_space:
-<<<<<<< HEAD
             1_bioswale:     0.0000
             2_rain_garden: 214671.6172
         2_low_intensity:
@@ -29,7 +28,6 @@ x:
         6_shrub_scrub:
             1_bioswale:     0.0000
             2_rain_garden:     0.0000
-=======
             1_bioswale: 773702.9147
             2_rain_garden: 2008840.5215
         2_low_intensity:
@@ -57,7 +55,6 @@ x:
         6_shrub_scrub:
             1_bioswale: 15614.5896
             2_rain_garden:  8899.3944
->>>>>>> 7da35593787c76d135dcc7060dbd09f38d2b61cc
 u:
     1_headwaters:
         1_open_space:
