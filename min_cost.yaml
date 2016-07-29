@@ -1,6 +1,7 @@
 x:
     1_headwaters:
         1_open_space:
+<<<<<<< HEAD
             1_bioswale:     0.0000
             2_rain_garden: 214671.6172
         2_low_intensity:
@@ -28,6 +29,35 @@ x:
         6_shrub_scrub:
             1_bioswale:     0.0000
             2_rain_garden:     0.0000
+=======
+            1_bioswale: 773702.9147
+            2_rain_garden: 2008840.5215
+        2_low_intensity:
+            1_bioswale: 1549704.8762
+            2_rain_garden: 1418606.0958
+            3_tree_trench: 4503334.8430
+            4_rain_barrel: 8025521.7190
+            5_impervious_removal: 2863083.0645
+        3_med_intensity:
+            1_bioswale: 4429655.1314
+            2_rain_garden: 4371370.6554
+            3_tree_trench: 6839742.6854
+            4_rain_barrel: 6954453.2736
+            5_impervious_removal: 6181736.0388
+            6_permeable_pavement: 393676.8494
+            7_green_roof:     0.0000
+        4_high_intensity:
+            2_rain_garden: 433924.6545
+            3_tree_trench: 2316915.8820
+            4_rain_barrel: 2517269.6880
+            5_impervious_removal: 1678179.8385
+            6_permeable_pavement: 18987405.8918
+            7_green_roof:     0.0000
+        5_decid_forest:
+        6_shrub_scrub:
+            1_bioswale: 15614.5896
+            2_rain_garden:  8899.3944
+>>>>>>> 7da35593787c76d135dcc7060dbd09f38d2b61cc
 u:
     1_headwaters:
         1_open_space:
