@@ -1,17 +1,8 @@
 data;
 param Bmin :=
-<<<<<<< HEAD
 1_volume   10
 2_sediment   20
 3_nitrogen   30
 4_phosphorous   40
 ;
 model;
-=======
-	1_volume	400
-	2_sediment	800
-	3_nitrogen	0.0
-	4_phosphorous	0.0
-;
-model;
->>>>>>> 7da35593787c76d135dcc7060dbd09f38d2b61cc
