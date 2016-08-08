@@ -39,17 +39,6 @@ KONJ:
         2_rain_garden
     }
 
-KONJ2:
-    1_open_space: {
-        1_bioswale,
-        2_rain_garden
-    }
-    2_low_intensity: {
-        1_bioswale,
-        2_rain_garden,
-        3_tree_trench,
-        4_rain_barrel,
-        5_impervious_removal}
 convert:
     1_volume:       264.172e-6  # million gallons per cubic meter
     2_sediment:     0.0011  # english ton per kg

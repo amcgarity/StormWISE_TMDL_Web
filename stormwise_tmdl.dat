@@ -1,0 +1,42 @@
+set I := 1_headwaters ;
+set J := 1_open_space 2_low_intensity 3_med_intensity 4_high_intensity 5_decid_forest 6_shrub_scrub ;
+set K := 1_bioswale 2_rain_garden 3_tree_trench 4_rain_barrel 5_impervious_removal 6_permeable_pavement 7_green_roof ;
+set T := 1_volume 2_sediment 3_nitrogen 4_phosphorous ;
+set KONJ[1_open_space] := 1_bioswale 2_rain_garden  ;
+set KONJ[2_low_intensity] := 1_bioswale 2_rain_garden 3_tree_trench 4_rain_barrel 5_impervious_removal  ;
+set KONJ[3_med_intensity] := 1_bioswale 2_rain_garden 3_tree_trench 4_rain_barrel 5_impervious_removal 6_permeable_pavement 7_green_roof  ;
+set KONJ[4_high_intensity] := 2_rain_garden 3_tree_trench 4_rain_barrel 5_impervious_removal 6_permeable_pavement 7_green_roof  ;
+set KONJ[5_decid_forest] := ;
+set KONJ[6_shrub_scrub] := 1_bioswale 2_rain_garden  ;
+param u: 1_bioswale 2_rain_garden 3_tree_trench 4_rain_barrel 5_impervious_removal 6_permeable_pavement 7_green_roof  :=
+  1_headwaters 1_open_space   773702.91  2008840.52           .           .           .           .           .
+  1_headwaters 2_low_intensity  1549704.88  1418606.10  4503334.84  8025521.72  2863083.06           .           .
+  1_headwaters 3_med_intensity  4429655.13  4371370.66  6839742.69  6954453.27  6181736.04  46627951.20  99084396.31
+  1_headwaters 4_high_intensity           .   433924.65  2316915.88  2517269.69  1678179.84  18987405.89  35865100.13
+  1_headwaters 5_decid_forest           .           .           .           .           .           .           .
+  1_headwaters 6_shrub_scrub    15614.59     8899.39           .           .           .           .           .
+;
+param s: 1_volume 2_sediment 3_nitrogen 4_phosphorous  :=
+  1_headwaters 1_open_space 1_bioswale  0.01755665739687  0.01441255170741  0.00001988294332  0.00000485084795
+  1_headwaters 1_open_space 2_rain_garden  0.11089563577495  0.02137420946306  0.00010465790796  0.00001489449664
+  1_headwaters 2_low_intensity 1_bioswale  0.01878369310686  0.02822073007628  0.00001725452247  0.00000353437308
+  1_headwaters 2_low_intensity 2_rain_garden  0.13389016533882  0.04722940785706  0.00010249186411  0.00001224660281
+  1_headwaters 2_low_intensity 3_tree_trench  0.03635953081626  0.01463217084611  0.00002783293367  0.00000332571650
+  1_headwaters 2_low_intensity 4_rain_barrel  0.02040230501306  0.00912278037036  0.00002342670503  0.00000239933373
+  1_headwaters 2_low_intensity 5_impervious_removal  0.00635442199550  0.00284134543663  0.00000729638978  0.00000074728709
+  1_headwaters 3_med_intensity 1_bioswale  0.01956461016229  0.01932521098006  0.00003539699181  0.00000903730598
+  1_headwaters 3_med_intensity 2_rain_garden  0.05634607133937  0.01306752224029  0.00008495277140  0.00001265222704
+  1_headwaters 3_med_intensity 3_tree_trench  0.03841229303542  0.01016310729525  0.00005791407762  0.00000862528728
+  1_headwaters 3_med_intensity 4_rain_barrel  0.03541753076910  0.01041194937277  0.00008009832780  0.00001022506518
+  1_headwaters 3_med_intensity 5_impervious_removal  0.01475730497508  0.00433831238210  0.00003337430435  0.00000426044397
+  1_headwaters 3_med_intensity 6_permeable_pavement  0.00352162964396  0.00074770157597  0.00000725638294  0.00000073428107
+  1_headwaters 3_med_intensity 7_green_roof  0.00248585621927  0.00004059918060  0.00000512215266  0.00000051831605
+  1_headwaters 4_high_intensity 2_rain_garden  0.17312850277329  0.04242783720417  0.00026199369826  0.00003453224504
+  1_headwaters 4_high_intensity 3_tree_trench  0.04323260148467  0.01208705116037  0.00006542348006  0.00000862318315
+  1_headwaters 4_high_intensity 4_rain_barrel  0.03979164468452  0.01236113561782  0.00009032446983  0.00001020452045
+  1_headwaters 4_high_intensity 5_impervious_removal  0.01657985149248  0.00515047303138  0.00003763519472  0.00000425188340
+  1_headwaters 4_high_intensity 6_permeable_pavement  0.00395655552835  0.00088767623635  0.00000818280382  0.00000073280567
+  1_headwaters 4_high_intensity 7_green_roof  0.00279286271684  0.00004819961449  0.00000577609680  0.00000051727459
+  1_headwaters 6_shrub_scrub 1_bioswale  0.01755665739687  0.01441255170741  0.00001988294332  0.00000485084795
+  1_headwaters 6_shrub_scrub 2_rain_garden  0.11089563577495  0.02137420946306  0.00010465790796  0.00001489449664
+;

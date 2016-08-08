@@ -1,0 +1,30 @@
+x:
+    1_headwaters:
+        1_open_space:
+            1_bioswale: 773702.9100
+            2_rain_garden: 2008840.5200
+        2_low_intensity:
+            1_bioswale: 1549704.8800
+            2_rain_garden: 1418606.1000
+            3_tree_trench: 4503334.8400
+            4_rain_barrel: 8025521.7200
+            5_impervious_removal: 2863083.0600
+        3_med_intensity:
+            1_bioswale: 4429655.1300
+            2_rain_garden: 4371370.6600
+            3_tree_trench: 6839742.6900
+            4_rain_barrel: 6954453.2700
+            5_impervious_removal: 6181736.0400
+            6_permeable_pavement: 393676.9389
+            7_green_roof:     0.0000
+        4_high_intensity:
+            2_rain_garden: 433924.6500
+            3_tree_trench: 2316915.8800
+            4_rain_barrel: 2517269.6900
+            5_impervious_removal: 1678179.8400
+            6_permeable_pavement: 18987405.8900
+            7_green_roof:     0.0000
+        5_decid_forest:
+        6_shrub_scrub:
+            1_bioswale: 15614.5900
+            2_rain_garden:  8899.3900
