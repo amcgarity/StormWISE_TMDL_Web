@@ -5,7 +5,7 @@ from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django.contrib import messages 
 from forms import *
-from stormwise import storm
+from stormwise_tmdl import storm
 
 def test(request):
 	messages.info(request,'this works')
@@ -28,8 +28,8 @@ def benefits(request):
 			pa = phos.cleaned_data['phosphorous']
 		if ra != None and sa != None and na != None and pa != None:
 			ben = [ra,sa,na,pa]
-			x = storm(ben)
-			y = "%.2f" % x
+			x = storm('wingohocking.yaml',ben)
+			y = '%.2f' % x['investmentTotal']
 			messages.add_message(request, messages.INFO, y)
 		else:
 			messages.error(request, 'Fill all fields')	
