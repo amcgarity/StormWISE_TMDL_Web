@@ -18,6 +18,7 @@ def benefits(request):
 		sed = SedForm(request.GET)
 		nit = NitForm(request.GET)
 		phos = PhosForm(request.GET)
+		array1 = [0,0,0,0]
 		if run.is_valid():
 			ra = run.cleaned_data['runoff']
 		if sed.is_valid():
@@ -31,6 +32,10 @@ def benefits(request):
 			x = storm('wingohocking.yaml',ben)
 			y = '%.2f' % x['investmentTotal']
 			messages.add_message(request, messages.INFO, y)
+			array1 = [x['benTotsByBenefit']['1_volume'],
+			x['benTotsByBenefit']['2_sediment'],
+			x['benTotsByBenefit']['3_nitrogen'],
+			x['benTotsByBenefit']['4_phosphorous']]
 		else:
 			messages.error(request, 'Fill all fields')	
 		
@@ -41,6 +46,6 @@ def benefits(request):
 		phos = PhosForm()	
 
 	return render(request,'benefits.html',
-		{'run':run, 'sed':sed, 'nit':nit, 'phos':phos})
+		{'run':run, 'sed':sed, 'nit':nit, 'phos':phos, 'array1':array1})
 
 
