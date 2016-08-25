@@ -14,20 +14,29 @@ def test(request):
 def benefits(request):
 	
 	if request.method == 'GET':
-		run = RunoffForm(request.GET)
-		sed = SedForm(request.GET)
-		nit = NitForm(request.GET)
-		phos = PhosForm(request.GET)
+		run = r_priority(request.GET)
+		sed = s_priority(request.GET)
+		nit = n_priority(request.GET)
+		phos = p_priority(request.GET)
 		array1 = [0,0,0,0]
+		ben = [0,0,0,0]
 		if run.is_valid():
 			ra = run.cleaned_data['runoff']
+			
 		if sed.is_valid():
 			sa = sed.cleaned_data['sedimentation']	
+			
 		if nit.is_valid():
-			na = nit.cleaned_data['nitrogen']	
+			na = nit.cleaned_data['nitrogen']
+				
 		if phos.is_valid():
 			pa = phos.cleaned_data['phosphorous']
+			
 		if ra != None and sa != None and na != None and pa != None:
+			ra = ra/10.0 * 693
+			sa = sa/10.0 * 844
+			na = na/10.0 * 9207
+			pa = pa/10.0 * 1168
 			ben = [ra,sa,na,pa]
 			x = storm('wingohocking.yaml',ben)
 			y = '%.2f' % x['investmentTotal']

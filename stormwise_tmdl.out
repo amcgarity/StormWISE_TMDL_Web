@@ -1,15 +1,16 @@
-investment = 6795750
+investment = 21124900
 
 x [1_headwaters,*,*] (tr)
 # $2 = 2_low_intensity
+# $3 = 3_med_intensity
 # $4 = 4_high_intensity
-:                    1_open_space  $2 3_med_intensity     $4   6_shrub_scrub :=
-1_bioswale                    0     0            0        .           0
-2_rain_garden           2008840     0      4344090      433925     8899.39
-3_tree_trench              .        0            0           0         .
-4_rain_barrel              .        0            0           0         .
-5_impervious_removal       .        0            0           0         .
-6_permeable_pavement       .        .            0           0         .
-7_green_roof               .        .            0           0         .
+:                    1_open_space     $2        $3        $4    6_shrub_scrub :=
+1_bioswale                    0           0         0      .           0
+2_rain_garden           2008840     1418610   4371370    433925     8899.39
+3_tree_trench              .              0   1094630   2316920         .
+4_rain_barrel              .              0   6954450   2517270         .
+5_impervious_removal       .              0         0         0         .
+6_permeable_pavement       .           .            0         0         .
+7_green_roof               .           .            0         0         .
 ;
 

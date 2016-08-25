@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Writing with yaml example</title>
+<title>Stormwise Model</title>
 <style>
       table {
         border: 1px solid black;
@@ -13,52 +13,68 @@
 </style>      
 </head>
 <body>
-<p>You Set Benefit Goals</p>
+<h2>You Set Benefit Goals</h2>
 <form method = 'GET'>
 <table id='javaT'>
 
 	<tr>
           <th>Reduction In:</th>
+          <th>Priority</th>
           <th>Benefits if We Do Everything</th>
-          <th>You Set Benefit Goals</th>
+          <th>Benefit Goal</th>
           <th>Benefits Actually Achieved</th>
     </tr>
 	<tr>
 		<td>Runoff (million gal.)</td>
-		<td style='text-align:center;'>693</td>
 		<td>{{ run.as_p }}</td>
+		<td style='text-align:center;'>693</td>
+		<td><input id = 'rgoal' type='text' style='border:hidden; text-align:center; font-family: "Times New Roman", Times, serif; font-size:16px' value=''/></td>
 		<td id='run' style='text-align:center;'></td>
 	</tr>
 	<tr>
 		<td>Sediment (tons)</td>
-        <td style='text-align:center;'>844</td>
 		<td>{{ sed.as_p }}</td>
+        <td style='text-align:center;'>844</td>
+		<td><input id = 'sgoal' type='text' style='border:hidden; text-align:center; font-family: "Times New Roman", Times, serif; font-size:16px' value=''/></td>
 		<td id='sed' style='text-align:center;'></td>
 	</tr>
 	<tr>
 		<td>Nitrogen (lbs.)</td>
-        <td style='text-align:center;'>9207</td>
 		<td>{{ nit.as_p }}</td>
+        <td style='text-align:center;'>9207</td>
+		<td><input id = 'ngoal' type='text' style='border:hidden; text-align:center; font-family: "Times New Roman", Times, serif; font-size:16px' value=''/></td>
 		<td id='nit' style='text-align:center;'></td>
 	</tr>
 	<tr>
 		<td>Phosphorous (lbs.)</td>
-        <td style='text-align:center;'>1168</td>
 		<td>{{ phos.as_p }}</td>
-		<td id='phos' style='text-align:center;'>
-          </td>
+        <td style='text-align:center;'>1168</td>
+		<td><input id = 'pgoal' type='text' style='border:hidden; text-align:center; font-family: "Times New Roman", Times, serif; font-size:16px' value=''/></td>
+		<td id='phos' style='text-align:center;'></td>
 	</tr>
 </table>
-	<input type='submit' align ='bottom' value='Minimize'>
+	<input type='submit' align ='bottom' value='Minimize'/>
 </form>
 <button onclick="myFunction();">Display</button>
 {% if messages %}
 {% for message in messages %}
-<p> Total Cost: ${{ message }} Million </p>
+<p> Total Cost: ${{ message }} </p>
 {% endfor %}
 {% endif %}
 
 <script>
+function updateTextInput1(val) {
+		  document.getElementById('rgoal').value = val*693/10;
+}
+function updateTextInput2(val) {
+		  document.getElementById('sgoal').value = val*844/10;
+}
+function updateTextInput3(val) {
+		  document.getElementById('ngoal').value = val*9207/10;
+}
+function updateTextInput4(val) {
+		  document.getElementById('pgoal').value = val*1168/10;
+}
 function myFunction() {
           var x = document.getElementById("javaT");
           var array1 = {{ array1|safe }};
