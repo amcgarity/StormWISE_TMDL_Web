@@ -1,8 +1,0 @@
-data;
-param Bmin :=
-1_volume   10
-2_sediment   20
-3_nitrogen   30
-4_phosphorous   40
-;
-model;

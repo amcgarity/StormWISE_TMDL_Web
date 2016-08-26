@@ -1,6 +1,7 @@
 # AEM #
 .spyderproject
 *.pyc
+*.dat
 # Compiled source #
 ###################
 *.com
