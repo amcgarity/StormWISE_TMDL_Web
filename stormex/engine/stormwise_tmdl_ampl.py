@@ -77,7 +77,7 @@ def generate_ampl_dat_file(inYamlDoc):
                         ampl += "\n"
     ampl += ";\n"        
     return ampl
-
+'''
 import yaml  
 def main(inYamlFile):
     with open(inYamlFile, 'r') as fin:
@@ -87,3 +87,4 @@ def main(inYamlFile):
         fout.write(ampl)
         fout.close()
 main('wingohocking.yaml')
+'''

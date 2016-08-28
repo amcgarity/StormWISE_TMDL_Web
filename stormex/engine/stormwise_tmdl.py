@@ -370,16 +370,16 @@ def evaluate_solution(decisions,s,inYamlDoc):
     '''
 
     solutionStr = yaml.dump(solutionDict)
-    print "\n\nsolutionStr printout:"
-    print solutionStr
+    #print "\n\nsolutionStr printout:"
+    #print solutionStr
     return(solutionDict)  
           
 def storm(inYamlFile,bens):
     with open(inYamlFile, 'r') as fin:
         inYamlDoc = yaml.load(fin)
     decisions = stormwise(inYamlDoc,bens)
-    print "\nDECISIONS:"
-    print yaml.dump(decisions)
+    #print "\nDECISIONS:"
+    #print yaml.dump(decisions)
     s = benefit_slopes(inYamlDoc)
     sol = evaluate_solution(decisions,s,inYamlDoc)
     return sol

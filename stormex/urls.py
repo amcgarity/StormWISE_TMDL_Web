@@ -18,6 +18,7 @@ from django.contrib import admin
 from stormex.views import *
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls), url(r'^benefits/$', benefits),
+    url(r'^admin/', admin.site.urls), 
+    url(r'^benefits/$', benefits),
     url(r'^test/$', test)
 ]

@@ -5,14 +5,16 @@ from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django.contrib import messages 
 from forms import *
-from stormwise_tmdl import storm
-
+import os
+#from StormWISE_TMDL_Engine.stormwise_tmdl import stormwise
+#from StormWISE_TMDL_Engine.stormwise_tmdl import evaluate_solution
+from engine.stormwise_tmdl import storm
 def test(request):
 	messages.info(request,'this works')
 	return render(request,'test.html')
 
 def benefits(request):
-	
+	os.chdir("/code/stormex/engine")  # Django:  "/code" is the directory of the Django project
 	if request.method == 'GET':
 		run = r_priority(request.GET)
 		sed = s_priority(request.GET)
@@ -38,7 +40,7 @@ def benefits(request):
 			na = na/10.0 * 9207
 			pa = pa/10.0 * 1168
 			ben = [ra,sa,na,pa]
-			x = storm('wingohocking.yaml',ben)
+			x = storm('/code/stormex/wingohocking.yaml',ben)
 			y = '%.2f' % x['investmentTotal']
 			messages.add_message(request, messages.INFO, y)
 			array1 = [x['benTotsByBenefit']['1_volume'],
