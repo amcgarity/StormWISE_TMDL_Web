@@ -6,9 +6,19 @@ from django.template import RequestContext
 from django.contrib import messages 
 from forms import *
 import os
-#from StormWISE_TMDL_Engine.stormwise_tmdl import stormwise
-#from StormWISE_TMDL_Engine.stormwise_tmdl import evaluate_solution
-from engine.stormwise_tmdl import storm
+# additional imports taken from stormwise_tmdl_cml:
+import yaml
+from copy import deepcopy
+from StormWISE_TMDL_Engine.stormwise_tmdl import stormwise
+from StormWISE_TMDL_Engine.stormwise_tmdl import evaluate_solution
+from StormWISE_TMDL_Engine.stormwise_tmdl_benefits_and_bounds import benefit_slopes
+from StormWISE_TMDL_Engine.stormwise_tmdl_benefits_and_bounds import upper_bounds
+from StormWISE_TMDL_Engine.stormwise_tmdl_benefits_and_bounds import convert_benefit_units
+from StormWISE_TMDL_Engine.stormwise_tmdl_benefits_and_bounds import format_and_convert_benefit_dict
+from Arts_Python_Tools.tools import multiply_dict_by_constant
+from Arts_Python_Tools.tools import format_dict_as_strings
+
+#from engine.stormwise_tmdl import storm 
 def test(request):
 	messages.info(request,'this works')
 	return render(request,'test.html')
