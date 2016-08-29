@@ -5,7 +5,7 @@ x:
             2_rain_garden:     0.0000
         2_low_intensity:
             1_bioswale:     0.0000
-            2_rain_garden:  1778.5529
+            2_rain_garden:     0.0000
             3_tree_trench:     0.0000
             4_rain_barrel:     0.0000
             5_impervious_removal:     0.0000
@@ -18,7 +18,7 @@ x:
             6_permeable_pavement:     0.0000
             7_green_roof:     0.0000
         4_high_intensity:
-            2_rain_garden:     0.0000
+            2_rain_garden:   398.5479
             3_tree_trench:     0.0000
             4_rain_barrel:     0.0000
             5_impervious_removal:     0.0000

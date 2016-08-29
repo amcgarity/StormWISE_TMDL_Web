@@ -18,14 +18,25 @@ from StormWISE_TMDL_Engine.stormwise_tmdl_benefits_and_bounds import format_and_
 from Arts_Python_Tools.tools import multiply_dict_by_constant
 from Arts_Python_Tools.tools import format_dict_as_strings
 
+amplPath = "/var/lib/ampl/ampl"
+
 #from engine.stormwise_tmdl import storm 
 def test(request):
 	messages.info(request,'this works')
 	return render(request,'test.html')
 
 def benefits(request):
-	os.chdir("/code/stormex/engine")  # Django:  "/code" is the directory of the Django project
+    try:
+    	inYamlFile = "wingohocking.yaml"
+	    with open(inYamlFile, 'r') as fin:
+	        inYamlDoc = yaml.load(fin)
+	except IOError:
+    	print "\n SORRY:  the file %s can not be found" % inYamlFile
+
+	os.chdir("/code/stormex/StormWISE_TMDL_Engine")  # all file input and output now in this directory
+
 	if request.method == 'GET':
+		benefitDict = {}
 		run = r_priority(request.GET)
 		sed = s_priority(request.GET)
 		nit = n_priority(request.GET)
