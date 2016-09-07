@@ -1,6 +1,0 @@
-[submodule "stormex/StormWISE_TMDL_Engine"]
-	path = stormex/StormWISE_TMDL_Engine
-	url = git@github.com:amcgarity/StormWISE_TMDL_Engine.git
-[submodule "stormex/Arts_Python_Tools"]
-	path = stormex/Arts_Python_Tools
-	url = git@github.com:amcgarity/Arts_Python_Tools.git
