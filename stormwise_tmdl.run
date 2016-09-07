@@ -1,0 +1,36 @@
+reset;
+model stormwise_tmdl.mod;
+data stormwise_tmdl.dat;
+data stormwise_tmdl_benefits.dat;
+option solver "/var/lib/ampl/minos";
+solve;
+
+# YAML output for stormwise.py:
+
+# Variables x YAML section:
+printf "x:\n" > stormwise_tmdl.yaml;
+for {i in I} {
+    printf "    %s:\n", i >> stormwise_tmdl.yaml;
+    for {j in J} {
+        printf "        %s:\n", j >> stormwise_tmdl.yaml;
+        for {k in KONJ[j]} {
+            printf "            %s: %10.4f\n", k,x[i,j,k].val >> stormwise_tmdl.yaml;
+        }
+    }
+}
+
+
+#printf "%8.4f,",(investment/1e6) > investment.csv; # minimum cost as $million
+# Actual benefits obtained:  
+#for {tp in T} printf "%8.3f,", convert[tp]*sum{i in I, j in J, k in KONJ[j]} s[i,j,k,tp]*x[i,j,k].val >> investment.csv;
+# Investment $ by drainage zone:
+#printf {i in I} "%8.4f,", (sum{j in J, k in KONJ[j]}x[i,j,k].val)/1e6 >> investment.csv;
+# Investment $ by landuse:
+#printf {j in J} "%8.4f,", (sum{i in I, k in KONJ[j]}x[i,j,k].val)/1e6 >> investment.csv;
+# Investment $ by GI Practice:
+#printf {k in K} "%8.4f,", (sum{i in I, j in J : k in KONJ[j]}x[i,j,k].val)/1e6 >> investment.csv;
+#printf "\n" >> investment.csv;
+
+#close investment.csv;
+#display investment>stormwise_tmdl.out;
+#display x>>stormwise_tmdl.out;
