@@ -1,0 +1,11 @@
+benefitUnits:
+    1_volume: 'Million Gallons'
+    2_sediment: 'Tons'
+    3_nitrogen: 'Pounds'
+    4_phosphorous: 'Pounds'
+
+benefitConvertUnits:
+    1_volume:       264.172e-6  # million gallons per cubic meter
+    2_sediment:     0.0011  # english ton per kg
+    3_nitrogen:     2.2     # pound per kg
+    4_phosphorous:  2.2     # pound per kg
