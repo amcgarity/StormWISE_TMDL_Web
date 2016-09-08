@@ -1,0 +1,6 @@
+[submodule "StormWISE_TMDL_Engine"]
+	path = StormWISE_TMDL_Engine
+	url = git@github.com:amcgarity/StormWISE_TMDL_Engine.git
+[submodule "Arts_Python_Tools"]
+	path = Arts_Python_Tools
+	url = git@github.com:amcgarity/Arts_Python_Tools.git
