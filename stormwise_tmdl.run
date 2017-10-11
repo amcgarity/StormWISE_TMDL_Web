@@ -2,7 +2,7 @@ reset;
 model stormwise_tmdl.mod;
 data stormwise_tmdl.dat;
 data stormwise_tmdl_benefits.dat;
-option solver "/var/lib/ampl/minos";
+option solver "ampl.linux64/minos";
 solve;
 
 # YAML output for stormwise.py:

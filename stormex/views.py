@@ -18,7 +18,7 @@ from StormWISE_TMDL_Engine.stormwise_tmdl_benefits_and_bounds import format_and_
 from Arts_Python_Tools.tools import multiply_dict_by_constant
 from Arts_Python_Tools.tools import format_dict_as_strings
 
-amplPath = "/var/lib/ampl/ampl"
+amplPath = "ampl.linux64/ampl"
 
 #from engine.stormwise_tmdl import storm 
 def test(request):

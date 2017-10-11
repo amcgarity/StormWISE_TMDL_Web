@@ -70,7 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'stormex.wsgi.application'
 
-
+'''
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
@@ -83,7 +83,7 @@ DATABASES = {
         'PORT': 5432,
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
